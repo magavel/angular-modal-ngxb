@@ -11,7 +11,7 @@ import { ModalWindowService } from '../modal-window.service';
 
 export class ParentComponent implements OnInit {
 
-
+  test = false;
   constructor(private modalService: ModalWindowService) { }
 
   openModal() {
@@ -22,15 +22,14 @@ export class ParentComponent implements OnInit {
     };
     this.modalService.showModal(ModalComponent, { initialState }, () => {
       console.log('dans la callBack du parent');
+      this.test = true;
+      console.log('ds cb', this.test);
     });
 
-
+    console.log('ds openshow', this.test);
   }
   ngOnInit() {
-/*     this.modalService.response.subscribe((response: boolean) => {
-      console.log(response);
-      }
-    ); */
+    console.log('ds oninit', this.test);
   }
 
 }

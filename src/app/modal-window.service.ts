@@ -17,10 +17,10 @@ export class ModalWindowService  {
 
   showModal( modalComponent, {initialState}, callback) {
     this.bsModalRef = this.modalService.show( modalComponent, {initialState});
-    this.rep(callback);
+    this.reponse(callback);
   }
 
-  rep(callback){
+  reponse(callback){
     this.response.subscribe((response: boolean) => {
       callback();
       }

@@ -41,7 +41,6 @@ export class ModalComponent {
   test() {
     this.bsModalRef.hide();
     this.modalService.response.emit(false);
-
   }
 
 }
